@@ -1,0 +1,58 @@
+﻿@model EasyWord.Models.系统公告
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout_Bootstrap.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>系统公告</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.公告标题)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.公告标题)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.标题色彩)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.标题色彩)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.公告内容)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.公告内容)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布时间)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布时间)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布人编号)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布人编号)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布人姓名)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布人姓名)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="公告编号" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

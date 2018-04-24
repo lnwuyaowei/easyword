@@ -1,0 +1,60 @@
+﻿@model EasyWord.Models.系统公告
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>系统公告</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="公告编号" />
+            <div class="form-group">
+                <label asp-for="公告标题" class="control-label"></label>
+                <input asp-for="公告标题" class="form-control" />
+                <span asp-validation-for="公告标题" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="标题色彩" class="control-label"></label>
+                <input asp-for="标题色彩" class="form-control" />
+                <span asp-validation-for="标题色彩" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="公告内容" class="control-label"></label>
+                <input asp-for="公告内容" class="form-control" />
+                <span asp-validation-for="公告内容" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="发布时间" class="control-label"></label>
+                <input asp-for="发布时间"  class="form-control" />
+                <span asp-validation-for="发布时间" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="发布人编号" class="control-label"></label>
+                <input asp-for="发布人编号" class="form-control" />
+                <span asp-validation-for="发布人编号" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="发布人姓名" class="control-label"></label>
+                <input asp-for="发布人姓名" class="form-control" />
+                <span asp-validation-for="发布人姓名" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

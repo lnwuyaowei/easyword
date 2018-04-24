@@ -1,0 +1,55 @@
+﻿@model EasyWord.Models.系统公告
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>系统公告</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.公告标题)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.公告标题)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.标题色彩)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.标题色彩)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.公告内容)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.公告内容)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布时间)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布时间)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布人编号)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布人编号)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.发布人姓名)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.发布人姓名)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.公告编号">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
